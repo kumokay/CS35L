@@ -1,3 +1,8 @@
+# YOU MUST USE EMACS IN THIS CLASS CUZ THE PROFESSOR TOLD US TO DO SO 
+# T_T SORRY FOR THE WRONG INFO.
+
+*******
+
 # CS35L
 
 ## use linux servers:
