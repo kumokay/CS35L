@@ -2,13 +2,18 @@
 
 ## use linux servers:
 
-windows:
+### windows:
 download putty: http://www.putty.org
-set hostname=cs31.seas.ucla.edu and then press "open"
-mac: ssh yourSEASaccount@cs31.seas.ucla.edu
-upload your project to linux servers:
 
-windows and mac:
+set hostname=cs31.seas.ucla.edu and then press "open"
+
+### mac: 
+
+ssh yourSEASaccount@cs31.seas.ucla.edu
+
+## upload your project to linux servers:
+
+### windows and mac:
 
 download filezilla client: https://filezilla-project.org/download.php
 
