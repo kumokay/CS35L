@@ -1,9 +1,27 @@
-# YOU MUST USE EMACS IN THIS CLASS CUZ THE PROFESSOR TOLD US TO DO SO 
-# T_T SORRY FOR THE WRONG INFO.
-
-*******
-
 # CS35L
+
+## Who grade which homework
+
+Assignment 1: Shrey Agarwal
+
+Assignment 2: Jeremy Rotman
+
+Assignment 3: Mevlut Turker Garip
+
+Assignment 4: Aditi Mithal
+
+Assignment 5: Rahul Dhavalikar
+
+Assignment 6: Guangyu Zhou
+
+Assignment 7: Each TA will grade his/her own section's submissions
+
+Assignment 8: Zhiyi Zhang
+
+Assignment 9: Hsiao-Yun Tseng
+
+Assignment 10: Each TA will grade his/her own section's submissions
+
 
 ## use linux servers:
 
