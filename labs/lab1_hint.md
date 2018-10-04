@@ -24,6 +24,8 @@ which COMMAND
 
 run `/usr/bin/gcc -v` and `gcc -v`
 
+run `which gcc` to check what the plain "gcc" pointed to
+
 6. The chmod program changes permissions on a file. What does the symbolic mode u+sx,o-w mean, in terms of permissions?
 
 do `man chmod` and you will see
