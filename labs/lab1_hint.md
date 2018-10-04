@@ -14,7 +14,7 @@ which SOME_COMMAND
 
 3. What executable programs have names that are exactly two characters long and end in r, and what do they do? List any shell commands you used to answer this question.
 
-man -k ^[a-z]r$
+`man -k ^[a-z]r$` or `man -k ^.r$`
 
 4. When you execute the command named by the symbolic link /usr/bin/emacs, which file actually is executed? List any shell commands you used to answer this question.
 
@@ -22,8 +22,7 @@ which COMMAND
 
 5. What is the version number of the /usr/bin/gcc program? of the plain gcc program? Why are they different programs?
 
-/usr/bin/gcc -v
-gcc -v
+run `/usr/bin/gcc -v` and `gcc -v`
 
 6. The chmod program changes permissions on a file. What does the symbolic mode u+sx,o-w mean, in terms of permissions?
 
