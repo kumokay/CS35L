@@ -1,6 +1,10 @@
-# CS35L
+# CS35L Fall 2018 Lab6
 
-## Who grade which homework
+https://web.cs.ucla.edu/classes/fall18/cs35L/
+
+## Who grades which homework
+
+### email the TA directly if you have any questions/issues
 
 Assignment 1: Shrey Agarwal
 
