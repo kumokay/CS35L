@@ -95,10 +95,22 @@ DIR=$1
 
 FILES=`ls $DIR`
 
-for file in $FILES
+for file1 in $FILES
 do
-    echo $file
+    for file2 in $FILES
+    do
+        if [[ $file1 == $file2 ]]
+        then
+            continue
+        fi
+        result=`cmp $file1 $file2`
+        if [[ $result == '' ]]
+        then
+            echo $file1 and $file2 are the same!
+        fi
+    done
 done
+
 
 ```
 
