@@ -74,10 +74,7 @@ cat hwnwdseng.htm | ./buildwords > hwords
 tr -cs "pk\'mnwlhaeiou" '[\n*]' < assign2.html | tr '[:upper:]' '[:lower:]' | sort -u | comm -23 - hwords
 ```
 
-
-## Assignment 2
-
-Homework: Find duplicate files
+# Homework: Find duplicate files
 Suppose you're working in a project where software (or people) create lots of files, many of them duplicates. You don't want the duplicates: you want just one copy of each, to save disk space. Write a shell script sameln that takes a single argument naming a directory D, finds all regular files immediately under D that are duplicates, and replaces the duplicates with hard links. Your script should not recursively examine all files that are in subdirectories of D; it should examine only files that are immediately in D.
 
 If your script finds two or more files that are duplicates, it should keep the file whose name is lexicographically first (for example, if the duplicates are named X, A, and B, it should keep A and replace X and B with hard links to A); however, it should prefer files whose name start with "." to other files (for example, if the duplicates are named .Y, .X, A, and B, it should keep .X and replace the others with hard links to .X).
