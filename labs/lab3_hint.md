@@ -4,10 +4,12 @@
 Keep a log in the file lab3.txt of what you do in the lab so that you can reproduce the results later. This should not merely be a transcript of what you typed: it should be more like a true lab notebook, in which you briefly note down what you did and what happened.
 
 You're helping to build an application containing a shell script that invokes the ls command to get file status. Your application is running atop the Maroon Chapeau Enterprise Linux 8 distribution, which uses the ls implementation supplied by Coreutils 8.29. You've been running into the problem that some users create a shell script la with the following contents:
+
 `
 #!/bin/sh
 exec ls -a "$@"
 `
+
 For these users the command la -A is therefore equivalent to ls -a -A. Unfortunately, with Coreutils ls, the -a option always overrides the -A option regardless of which option is given first, so the -A option has no effect in la. For example, if the current directory has two files named .foo and bar, the command la -A outputs four lines, one each for ., .., .foo, and bar. These users want la -A to output just two lines instead, one for .foo and one for bar. That is, for ls they want a later -A option to override any earlier -a option, and vice versa.
 
 You've been asked to look into the problem and fix it.
