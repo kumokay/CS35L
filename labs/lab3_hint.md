@@ -5,10 +5,10 @@ Keep a log in the file lab3.txt of what you do in the lab so that you can reprod
 
 You're helping to build an application containing a shell script that invokes the ls command to get file status. Your application is running atop the Maroon Chapeau Enterprise Linux 8 distribution, which uses the ls implementation supplied by Coreutils 8.29. You've been running into the problem that some users create a shell script la with the following contents:
 
-`
+```
 #!/bin/sh
 exec ls -a "$@"
-`
+```
 
 For these users the command la -A is therefore equivalent to ls -a -A. Unfortunately, with Coreutils ls, the -a option always overrides the -A option regardless of which option is given first, so the -A option has no effect in la. For example, if the current directory has two files named .foo and bar, the command la -A outputs four lines, one each for ., .., .foo, and bar. These users want la -A to output just two lines instead, one for .foo and one for bar. That is, for ls they want a later -A option to override any earlier -a option, and vice versa.
 
@@ -16,21 +16,74 @@ You've been asked to look into the problem and fix it.
 
 You discover that the problem is a known bug with Coreutils, Bug#30963. The bug report has a patch intended for publication in a later Coreutils release; see its Message #10. You don't want to wait for the later release to be installed on your system, so you decide to build a copy of Coreutils 8.29 with just this patch added, as follows:
 
-Grab the Coreutils 8.29 source code compressed tarball and verify its signature with the GNU keyring by running the shell command gpg --verify --keyring ./gnu-keyring.gpg coreutils-8.29.tar.xz.sig in your directory. Note any problems with this verification, and briefly explain why they happen.
+1. Grab the Coreutils 8.29 source code compressed tarball and verify its signature with the GNU keyring by running the shell command gpg --verify --keyring ./gnu-keyring.gpg coreutils-8.29.tar.xz.sig in your directory. Note any problems with this verification, and briefly explain why they happen.
 
-Compile and install your copy of Coreutils into a temporary directory of your own. Note any problems you run into.
+2. Compile and install your copy of Coreutils into a temporary directory of your own. Note any problems you run into.
 
-Reproduce the bug on your machine with the unmodified version of coreutils.
+3. Reproduce the bug on your machine with the unmodified version of coreutils.
 
-Apply the patch of Bug#30963 Message #10.
+4. Apply the patch of Bug#30963 Message #10.
 
-Type the command make at the top level of your source tree, so that you build (but do not install) the fixed version. For each command that gets executed, explain why it needed to be executed (or say that it wasn't neeeded).
+5. Type the command make at the top level of your source tree, so that you build (but do not install) the fixed version. For each command that gets executed, explain why it needed to be executed (or say that it wasn't neeeded).
 
-Make sure your change fixes the bug, by testing that the modified ls works and that the installed ls doesn't. Use the test case that comes with the patch.
+6. Make sure your change fixes the bug, by testing that the modified ls works and that the installed ls doesn't. Use the test case that comes with the patch.
 
 Q1. Does the patch improve the performance of ls or make it worse? Briefly explain.
 
 Q2. If your company adopts this patched version of Coreutils instead of the default one, what else should you watch out for? Might this new version of Coreutils introduce other problems with your application?
+
+## Hint:
+
+1. download tarball, signature, keyring and check
+```
+wget tarball_http_link
+wget signature_http_link
+wget keyring_http_link
+gpg --verify --keyring ./gnu-keyring.gpg coreutils-8.29.tar.xz.sig
+```
+
+2. unzip file and compile it
+
+- unzip the file
+````
+tar -xf TARBALL_NAME
+````
+- find out how to install the package, search for "--prefix" to find out how install it in your local directory
+```
+cd PKG_FOLDER
+emacs INSTALL  # take a look at how to install it; search for "prefix"
+```
+- configure, compile, and install the package
+```
+./configure --prefix=YOUR_FOLDER  # check and configure your package properties
+make  # compile
+make install  # install the package
+```
+3. run ls -aA and see what happened (you should see "." and "..")
+```
+YOUR_FOLDER/bin/ls -aA
+```
+
+4. create a new file copy/paste the patch content, and apply the patch
+```
+emacs patch.diff  # copy/paste/save...
+patch -p1 < patch.diff
+```
+
+5. re-compile the package
+```
+make
+```
+- if make doesn't work and you see automake warning, try this to update your make configurations
+```
+autoreconf --force --install
+```
+
+6. re-install and try again (you should not see "." and "..")
+```
+make install
+YOUR_FOLDER/bin/ls -aA
+```
 
 # Homework: Rewriting a script
 
