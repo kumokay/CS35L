@@ -100,3 +100,30 @@ Your program should support the following shuf options, with the same behavior a
 Your shuf.py program should not import any modules other than argparse, string and the modules that randline.py already imports. Don't forget to change its usage message to accurately describe the modified behavior.
 
 Port your shuf.py implementation to Python 3. If you have trouble with optparse under Python 3, you can use the argparse module instead. Make sure that your shuf.py still works with Python 2. Don't rewrite it from scratch; make as few changes as is reasonable.
+
+## Hint
+1. run these commands and see what would happen
+```
+python hw3.py -h
+python randline.py SOMEFILE -n 3
+python3 hw3.py -h
+python3 randline.py SOMEFILE -n 3
+```
+
+2. write python 2-3 compatiple code
+http://python-future.org/compatible_idioms.html
+
+3. how to use argparse or optparse
+https://docs.python.org/2/library/optparse.html
+
+4. run these commands and see what would happen
+```
+shuf --help
+shuf -e a b c d e
+shuf -i 1-10
+shuf -i 1-10 -r
+shuf -i 1-10 -z
+shuf -i 1-10 -n 3
+shuf -i 1-10 -n 3 -r
+shuf -i 1-10 -n 3 -r -z
+```
