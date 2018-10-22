@@ -104,16 +104,18 @@ Port your shuf.py implementation to Python 3. If you have trouble with optparse 
 ## Hint
 1. run these commands and see what would happen
 ```
-python hw3.py -h
+python randline.py -h
 python randline.py SOMEFILE -n 3
-python3 hw3.py -h
+python3 randline.py -h
 python3 randline.py SOMEFILE -n 3
 ```
 
 2. write python 2-3 compatiple code
+
 http://python-future.org/compatible_idioms.html
 
 3. how to use argparse or optparse
+
 https://docs.python.org/2/library/optparse.html
 
 4. run these commands and see what would happen
