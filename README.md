@@ -36,7 +36,7 @@ set hostname=cs31.seas.ucla.edu and then press "open"
 
 ### mac: 
 
-ssh yourSEASaccount@cs31.seas.ucla.edu
+ssh yourSEASaccount@lnxsrv09.seas.ucla.edu
 
 ## upload your project to linux servers:
 
