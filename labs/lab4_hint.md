@@ -39,3 +39,98 @@ seems like the sorted file list is wrong.. find something related to "sort"
 
 
 
+
+
+
+void qsort (void* base, size_t num, size_t size,
+            int (*compar)(const void*,const void*));
+
+| a | b | c | d | ....
+  ^   ^
+  p1  p2
+
+int mycmp(const void* p1,const void* p2)
+{
+    return *p1 - *p2  
+}
+
+compar ==> mycmp (memory)
+
+
+
+\0Quick23   \0Jumps!
+
+secret1: memfrob("\0Quick23", 9) => "*{_CIA\030\031 "
+secret2: memfrob("\0Jumps!", 9) => "*`_GZY\v "
+
+The memfrob() function encrypts the first n bytes of the memory area s
+       by exclusive-ORing each character with the number 42.  
+==> ch ^ 42
+
+
+frobcmp("*{_CIA\030\031 ", "*`_GZY\v ")
+=> memfrob("*{_CIA\030\031 ", NBYTES) => "\0Quick23"
+=> memfrob("*`_GZY\v ", NBYTES) => "\0Jumps!"
+
+=> 0
+=> Q,J +1
+
+a - b = ?
+'\0' - '\0' 
+'Q' - 'J' > 0 ==> +
+
+
+gcc -o sfrob -g sfrob.c
+
+
+'*~BO *{_CIA *hXE]D *LER #@_GZY #E\\OX #^BO #FKPS #NEM\4'
+
+*~BO 
+*{_CIA *hXE]D 
+*LER 
+#@_GZY 
+#E\\OX 
+#^BO 
+#FKPS 
+#NEM\4
+
+^@The
+^@Quick
+^@Brown
+^@fox
+^Ijumps
+^Iover
+^Ithe
+^Ilazy
+^Idog.
+
+^@Brown
+^@Quick
+^@The
+^@fox
+^Idog.
+^Ijumps
+^Ilazy
+^Iover
+^Ithe
+
+qsort(array1, NUM, frobcmp)
+
+
+
+int frobcmp(char const* a, char const* b)
+{
+
+  // result = 0, 1, -1
+  return result;
+}
+
+a (pointer) -> 'asdfggsdagsdahagdgsgera'
+b (pointer) -> 'asdfggsdagfsdfasdahaera'
+
+
+
+> run /tmp/tmp.iBxo93Salp -lt --full-time wwi-armistice now now1
+
+
+
