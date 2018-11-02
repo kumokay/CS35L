@@ -177,7 +177,7 @@ given encrypted strings from stdin
 *~BO *{_CIA *hXE]D *LER #@_GZY #E\\OX #^BO #FKPS #NEM\4
 ```
 
-break it down to an array of strings
+break it down to an array of strings and sort them
 ```
 *~BO
 *{_CIA
@@ -189,7 +189,7 @@ break it down to an array of strings
 #FKPS 
 #NEM\4
 ```
-decrypted them by XOR 42 again
+when storing, compare the decrypted values (XOR 42 again)
 ```
 *~BO    => ^@The
 *{_CIA  => ^@Quick
@@ -201,19 +201,7 @@ decrypted them by XOR 42 again
 #FKPS   => ^Ilazy
 #NEM\4  => ^Idog.
 ```
-sort the decrypted ones
-```
-^@Brown
-^@Quick
-^@The
-^@fox
-^Idog.
-^Ijumps
-^Ilazy
-^Iover
-^Ithe
-```
-encrypt everyting again (XOR 42 again)
+the sorted value should be
 ```
 ^@Brown => *hXE]D
 ^@Quick => *{_CIA
