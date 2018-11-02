@@ -191,15 +191,15 @@ break it down to an array of strings
 ```
 decrypted them by XOR 42 again
 ```
-^@The
-^@Quick
-^@Brown
-^@fox
-^Ijumps
-^Iover
-^Ithe
-^Ilazy
-^Idog.
+*~BO    => ^@The
+*{_CIA  => ^@Quick
+*hXE]D  => ^@Brown
+*LER    => ^@fox
+#@_GZY  => ^Ijumps
+#E\\OX  => ^Iover
+#^BO    => ^Ithe
+#FKPS   => ^Ilazy
+#NEM\4  => ^Idog.
 ```
 sort the decrypted ones
 ```
@@ -213,24 +213,23 @@ sort the decrypted ones
 ^Iover
 ^Ithe
 ```
-output the encrypted version again (XOR 42 again)
+encrypt everyting again (XOR 42 again)
 ```
-*hXE]D
-
-TODO
-
-
-
-*~BO
-*{_CIA
-*hXE]D
-*LER 
-#@_GZY 
-#E\\OX 
-#^BO 
-#FKPS 
-#NEM\4
+^@Brown => *hXE]D
+^@Quick => *{_CIA
+^@The   => *~BO
+^@fox   => *LER
+^Idog.  => #NEM\4
+^Ijumps => #@_GZY
+^Ilazy  => #FKPS
+^Iover  => #E\\OX
+^Ithe   => #^BO
 ```
+output:
+```
+*hXE]D *{_CIA *~BO *LER #NEM\4 #@_GZY #FKPS #E\\OX #^BO
+```
+
 
 
 
