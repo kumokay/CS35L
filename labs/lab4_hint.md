@@ -158,6 +158,80 @@ and frobnicating this yields the output shown above.
 
 ### hint
 
+1. what does memfrob do? 
+
+https://linux.die.net/man/3/memfrob
+
+The memfrob() function encrypts the first n bytes of the memory area s by exclusive-ORing each character with the number 42. The effect can be reversed by using memfrob() on the encrypted memory area.
+
+For example:
+```
+memfrob("\0Quick23") => "*{_CIA\030\031"
+memfrob("*{_CIA\030\031") => "\0Quick23"
+```
+
+2. what should your program do:
+
+given encrypted strings from stdin
+```
+*~BO *{_CIA *hXE]D *LER #@_GZY #E\\OX #^BO #FKPS #NEM\4
+```
+
+break it down to an array of strings
+```
+*~BO
+*{_CIA
+*hXE]D
+*LER 
+#@_GZY 
+#E\\OX 
+#^BO 
+#FKPS 
+#NEM\4
+```
+decrypted them by XOR 42 again
+```
+^@The
+^@Quick
+^@Brown
+^@fox
+^Ijumps
+^Iover
+^Ithe
+^Ilazy
+^Idog.
+```
+sort the decrypted ones
+```
+^@Brown
+^@Quick
+^@The
+^@fox
+^Idog.
+^Ijumps
+^Ilazy
+^Iover
+^Ithe
+```
+output the encrypted version again (XOR 42 again)
+```
+*hXE]D
+
+TODO
+
+
+
+*~BO
+*{_CIA
+*hXE]D
+*LER 
+#@_GZY 
+#E\\OX 
+#^BO 
+#FKPS 
+#NEM\4
+```
+
 
 
 
