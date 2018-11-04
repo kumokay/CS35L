@@ -218,6 +218,85 @@ output:
 *hXE]D *{_CIA *~BO *LER #NEM\4 #@_GZY #FKPS #E\\OX #^BO
 ```
 
+3. sample io logic
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main()
+{
+    char * word = NULL;
+    char ** wordlist = NULL;
+    int wordlist_len = 0;
+    int word_len = 0;
+
+    char ch = ' ', prev_ch = ' ';
+    int is_eof = 0;
+
+    while(!is_eof)
+    {
+        prev_ch = ch;
+        ch = getc(stdin);
+        if (ch == EOF)
+        {
+          is_eof = 1;
+          ch = ' ';
+        }
+
+        if (prev_ch == ' ' && ch == ' ')
+        {
+            // skip conituous blanks
+            continue;
+        }
+
+        if (word == NULL)
+        {
+            word = (char*) malloc(sizeof(char));
+        }
+        else
+        {
+            word = (char*) realloc(word, (word_len+1)*sizeof(char));
+        }
+        word[word_len] = ch;
+        word_len++;
+
+        if (ch == ' ')
+        {
+            if (word != NULL)
+            {
+                if (wordlist == NULL)
+                {
+                    wordlist = (char**) malloc(sizeof(char*));
+                }
+                else
+                {
+                    wordlist = (char**) realloc(wordlist, (wordlist_len+1)*sizeof(char*));
+                }
+                wordlist[wordlist_len] = word;
+                wordlist_len++;
+                word = NULL;
+                word_len = 0;
+            }
+        }
+    }
+
+
+    for (int i=0; i<wordlist_len; i++)
+    {
+        for (int j=0; wordlist[i][j] != ' '; j++)
+            putc(wordlist[i][j], stdout);
+        putc('\n', stdout);
+
+        free(wordlist[i]);
+    }
+
+    free(wordlist);
+
+    return 0;
+}
+```
+
 
 
 
