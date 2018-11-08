@@ -16,6 +16,9 @@ ferror(stdin)
 
 
 ## homework: use read, write, fstat
+
+### how to use fstat
+https://linux.die.net/man/2/fstat
 ```
 #include <sys/types.h>
 #include <sys/stat.h>
