@@ -232,17 +232,11 @@ int main()
     int word_len = 0;
 
     char ch = ' ', prev_ch = ' ';
-    int is_eof = 0;
 
-    while(!is_eof)
+    while(!feof(stdin))
     {
         prev_ch = ch;
         ch = getc(stdin);
-        if (ch == EOF)
-        {
-          is_eof = 1;
-          ch = ' ';
-        }
 
         if (prev_ch == ' ' && ch == ' ')
         {
