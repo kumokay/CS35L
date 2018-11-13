@@ -1,7 +1,9 @@
 ### Lab hint
 
 1. check your sort version; make sure that it supports multithreading
+```
 sort --version
+```
 
 2. generate a file of random floats
 ```
