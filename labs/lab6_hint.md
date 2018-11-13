@@ -5,7 +5,7 @@ sort --version
 
 2. generate a file of random floats
 ```
-od -An -t fD -N NUMBER_OF_BYTES < /dev/urandom | tr -s [:blank:] '\n' | sed '/^$/d' > random.txt
+od -An -t fF -N NUMBER_OF_BYTES < /dev/urandom | tr -s [:blank:] '\n' | sed '/^$/d' > random.txt
 ```
 
 3. sort
