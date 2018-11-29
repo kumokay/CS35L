@@ -1,0 +1,33 @@
+Assignment 1. Getting to know your system
+- find grep
+- cd mv cp ls chmod 
+- wget/curl 
+Assignment 2. Shell scripting
+- tr sed sort
+- soft link
+- regular expression
+Assignment 3. Modifying and rewriting software
+- patch
+- given a patch file, what is the result after applied the patch
+- given a piece of python code, what is the output
+Assignment 4. C programming and debugging
+- touch sleep rm
+- given a piece of c code, what is the output
+Assignment 5. System call programming and debugging
+- expain how system call (e.g. read/write) works (https://www.usna.edu/Users/cs/aviv/classes/ic221/s18/units/04/unit.html)
+Assignment 6. Multithreaded performance
+- given a piece of c code, modify it to make it multithreaded 
+Assignment 7. Dynamic linking
+- static linking vs dynamic linking
+- given a makefile 
+    (1) expain what it is doing 
+    (2) if I want to add a new .c file to the project, how to modify the make file
+Assignment 8. SSH setup and use in applications
+- given a key and the encryption functions, how to encrypt and decrypt the message
+- explain how public key / private key works
+- explain how gpg works
+Assignment 9. Change management
+- git
+Bonus
+- how to write a peice of code to parse regular expression
+
