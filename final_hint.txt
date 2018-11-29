@@ -1,33 +1,34 @@
+1-line anser: 15 * 3 => 45
+coding: 3 * 10 => 30
+short answer: 5 * 5 => 25
+
 Assignment 1. Getting to know your system
-- find grep
-- cd mv cp ls chmod 
-- wget/curl 
+- find grep (2 1-line answer)
+- mv cp ls chmod (4 1-line answer) 
+- wget/curl (1 1-line answer)
 Assignment 2. Shell scripting
-- tr sed sort
-- soft link
-- regular expression
+- tr, sed, regular expression (1 coding)
+- soft link, hard link (2 1-line answer)
 Assignment 3. Modifying and rewriting software
-- patch
-- given a patch file, what is the result after applied the patch
-- given a piece of python code, what is the output
+- given a patch file, what is the result after applied the patch (1 1-line answer)
+- given a piece of python code, what is the output (1 1-line answer)
 Assignment 4. C programming and debugging
-- touch sleep rm
-- given a piece of c code, what is the output
+- touch sleep (1 1-line answer)
+- given a piece of c code, what is the output (1 1-line answer)
 Assignment 5. System call programming and debugging
-- expain how system call (e.g. read/write) works (https://www.usna.edu/Users/cs/aviv/classes/ic221/s18/units/04/unit.html)
+- expain how system call (e.g. read/write) works (1 short answer)
 Assignment 6. Multithreaded performance
-- given a piece of c code, modify it to make it multithreaded 
+- given a piece of c code, modify it to make it multithreaded (1 coding)
 Assignment 7. Dynamic linking
-- static linking vs dynamic linking
+- static linking vs dynamic linking (1 short answer)
 - given a makefile 
-    (1) expain what it is doing 
-    (2) if I want to add a new .c file to the project, how to modify the make file
+    (1) expain what it is doing (1 short answer)
+    (2) if I want to add a new .c file to the project, how to modify the make file (1 coding)
 Assignment 8. SSH setup and use in applications
-- given a key and the encryption functions, how to encrypt and decrypt the message
-- explain how public key / private key works
-- explain how gpg works
+- given a key and the encryption/decryption rules, explain how the sender/receiver communicate with each other securely (1 short answer)
+- expalin how gpg works (1 short answer)
 Assignment 9. Change management
-- git
-Bonus
-- how to write a peice of code to parse regular expression
+- git (2 1-line answer)
+Bonus (10 points)
+- a coding question about regular expression
 
