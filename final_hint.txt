@@ -1,34 +1,49 @@
-1-line anser: 15 * 3 => 45
-coding: 3 * 10 => 30
-short answer: 5 * 5 => 25
+### one-liner linux command: 10 * 3 => 30
+- Linux commands we learned in Assignment 1-9
+  * find grep mv ls chmod wget tr ln touch sleep cat sort shuf grep apt-get
+- How to use `|`, `&&`, `>`, `<`, etc
 
-Assignment 1. Getting to know your system
-- find grep (2 1-line answer)
-- mv cp ls chmod (4 1-line answer) 
-- wget/curl (1 1-line answer)
-Assignment 2. Shell scripting
-- tr, sed, regular expression (1 coding)
-- soft link, hard link (2 1-line answer)
-Assignment 3. Modifying and rewriting software
-- given a patch file, what is the result after applied the patch (1 1-line answer)
-- given a piece of python code, what is the output (1 1-line answer)
-Assignment 4. C programming and debugging
-- touch sleep (1 1-line answer)
-- given a piece of c code, what is the output (1 1-line answer)
-Assignment 5. System call programming and debugging
-- expain how system call (e.g. read/write) works (1 short answer)
-Assignment 6. Multithreaded performance
-- given a piece of c code, modify it to make it multithreaded (1 coding)
-Assignment 7. Dynamic linking
-- static linking vs dynamic linking (1 short answer)
-- given a makefile 
-    (1) expain what it is doing (1 short answer)
-    (2) if I want to add a new .c file to the project, how to modify the make file (1 coding)
-Assignment 8. SSH setup and use in applications
-- given a key and the encryption/decryption rules, explain how the sender/receiver communicate with each other securely (1 short answer)
-- expalin how gpg works (1 short answer)
-Assignment 9. Change management
-- git (2 1-line answer)
-Bonus (10 points)
-- a coding question about regular expression
+### short answer and coding: 6 * 5 => 30
+- Assignment 2. Shell scripting
+  * how to manipulate text from the command line with sed and regular expression
+- Assignment 3. Modifying and rewriting software
+  * given a patch file, what is the result after applied the patch
+- Assignment 4. C programming and debugging
+  * how to use malloc and free correctly
+- Assignment 6. Multithreaded performance
+  * given a piece of c code, modify it to make it multithreaded
+- Assignment 7. Dynamic linking
+  * write a makefile to build your project
 
+### open-ended question: 4 * 10 => 40 (print out the slides and you can find the aswer)
+- Assignment 5. System call programming and debugging
+- Assignment 7. Dynamic linking
+- Assignment 8. SSH setup and use in applications
+- Assignment 9. Change management
+
+### sample questions:
+- one-liner linux command:
+  * pick a random integer from [1,10] and save the result to number.txt
+    ```
+    shuf -i 1-10 -n 1 > number.txt
+    ```
+- scripting and coding:
+  * To build test.c we need to run `gcc -o test test.c`. Create a makefile such that we only need to type `make` to compile test.c and type `clean` to delete the old executable file.
+    ```
+    CC = gcc
+    
+    default: test
+
+    test: test.c
+        $(CC) -o test test.c
+
+    clean:
+        rm test
+    ```
+    
+- open-ended question:
+  * Explain how the sender/receiver communicate securely using public key and private key
+  ```
+  You can find the answer on the slides. 
+  As long as there is nothing too crazy you will not lose any points.
+  ```
