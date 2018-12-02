@@ -10,15 +10,9 @@ Export public key, in ASCII format, into hw-pubkey.asc
 $ gpg --armor --output hw-pubkey.asc --export ‘Your Name’
 ```
 
-Make a tarball of the above files + log.txt and zip it with gzip to produce hw.tar.gz
+Use the private key you created to make a detached clear signature for eeprom
 ```
-$ tar –cf hw.tar <files>
-$ gzip hw.tar -> creates hw.tar.gz
-```
-
-Use the private key you created to make a detached clear signature hw.tar.gz.sig for hw.tar.gz
-```
-$ gpg --armor --output hw.tar.gz.sig --detach-sign hw.tar.gz 
+$ gpg --armor --output your_sig --detach-sign your_eeprom
 ```
 
 Use given commands to verify signature and file formatting
