@@ -57,9 +57,14 @@ after running ./bootstrap and before running ./configure, because glibc 2.16 rem
 dangerous gets function declared by a Diffutils header.) Verify that Diffutils does the right thing with 
 the “diff . -” scenario, as well as with “diff --help”.
 ```
-# use lnxsrv05 so that you dont need to deal with the `gets` issue
 # read README-hacking and you can find these commands
 [~/diffutils]> ./bootstrap
+
+# switch to lnxsrv05 so that you dont need to deal with the `gets` issue
+# or patch diffutils-gets.diff after running ./bootstrap and before running ./configure
+[~/diffutils]> curl http://web.cs.ucla.edu/classes/winter18/cs35L/assign/diffutils-gets.diff > ../diffutils-gets.diff
+[~/diffutils]> patch -p0 < ../diffutils-gets.diff
+
 [~/diffutils]> ./configure
 [~/diffutils]> make
 [~/diffutils]> make check
