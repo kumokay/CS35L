@@ -70,8 +70,8 @@ the “diff . -” scenario, as well as with “diff --help”.
 [~/diffutils]> make check
 
 # try to run diff
-[~/diffutils]> diff . -
-[~/diffutils]> diff --help
+[~/diffutils]> ./src/diff . -
+[~/diffutils]> ./src/diff --help
 ```
 14. Do a sanity test using the modified version of Diffutils that you just built, 
 by using the just-built diff to compare the source code of Diffutils 3.0 to the source code of your modified version. 
