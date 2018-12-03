@@ -14,7 +14,7 @@
 ```
 4. Find the commit entitled “maint: quote 'like this' or "like this", not `like this'”, and generate a patch for that commit, putting it into the file quote-patch.txt.
 ```
-[~/diffutils]> git log --grep "maint: quote" | grep commit
+[~/diffutils]> git log --grep="maint: quote" | grep commit
 commit 62ca21c8c1a5aa3488589dcb191a4ef04ae9ed4f
 [~/diffutils]> git show 62ca21c8c1a5aa3488589dcb191a4ef04ae9ed4f > ../quote_patch.txt
 ```
