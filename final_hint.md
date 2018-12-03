@@ -1,3 +1,6 @@
+### when and where
+12/11 (Tue.) 3pm-6pm, Final Exam: COM SCI 35L LAB 6 (BOELTER 3760)
+
 ### one-liner linux command: 10 * 3 => 30
 - Linux commands we learned in Assignment 1-9
   * find grep mv ls chmod wget tr ln touch sleep cat sort shuf grep apt-get
