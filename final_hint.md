@@ -6,23 +6,29 @@
   * find grep mv ls chmod wget tr ln touch sleep cat sort shuf grep apt-get
 - How to use `|`, `&&`, `>`, `<`, etc
 
-### short answer and coding: 6 * 5 => 30
+### coding: 6 * 5 => 30
 - Assignment 2. Shell scripting
   * how to manipulate text from the command line with sed and regular expression
 - Assignment 3. Modifying and rewriting software
-  * given a patch file, what is the result after applied the patch
+  * given the source code and a patch file, what is the result after applied the patch
 - Assignment 4. C programming and debugging
   * how to use malloc and free correctly
 - Assignment 6. Multithreaded performance
-  * given a piece of c code, modify it to make it multithreaded
+  * given a piece of c code, modify it and make it multithreaded
 - Assignment 7. Dynamic linking
-  * write a makefile to build your project
+  * given some gcc commands to build a project, write a makefile based on those commands
 
 ### open-ended question: 4 * 10 => 40 (print out the slides and you can find the aswer)
 - Assignment 5. System call programming and debugging
 - Assignment 7. Dynamic linking
 - Assignment 8. SSH setup and use in applications
 - Assignment 9. Change management
+
+### other things
+- We will not ask you to write a shell script or a python script
+- We will not ask you any question regarding emacs, vim, and other editors
+- We will not ask you any question regarding beaglebone setup
+- There will be a bonus question (10 points) that you can use any language you like (either c, c++, or python). But the maximum you can get in total is still 100 points.
 
 ### sample questions:
 - one-liner linux command:
