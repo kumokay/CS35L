@@ -91,7 +91,7 @@ where the D is the directory containing your diff implementation.
 [~]> cp ./diffutils/src/*.c ./diffutils-3.0-patch/
 
 # compare
-[~]> ./diffutils/src/diff -pru diffutils-3.0 diffutils-3.0-patch > quote-3.0-test.txt
+[~]> ./diffutils/src/diff -pru diffutils-3.0/src diffutils-3.0-patch > quote-3.0-test.txt
 ```
 15. Use diff to compare the contents of quote-3.0-test.txt and quote-3.0-patch.txt. Are the files identical? If not, are the differences innocuous?
 ```
