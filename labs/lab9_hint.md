@@ -141,8 +141,19 @@ for homework you can clone diffutils again in a different folder to make sure ev
 [~/diffutils/diffutils-3.0-dirty] more ChangeLog    # or less or emacs..
 ```
 9. There is a copy of the GNU Emacs git repository's master branch on SEASnet in the directory ~eggert/src/gnu/emacs. Run the command gitk on it, and find the newest merge that is not newer than 2015-01-25. Take a screenshot gitk-screenshot.png of your view of the mergepoint, and in an ASCII text file gitk-description.txt briefly describe the roles of subwindows that you see in the screenshot.
+  - Mac or Linux:
+    ```
+    Make sure you have Xqartz running 
+    ssh -X yourid@yourseasnetserver
+    ```
+  - Windows
+    ```
+    Make sure you have Xming 
+    Enable X11 forwarding in putty putty (in SSH -> X11)
+    ```
+
+Then do this:
 ```
-ssh -X yourid@yourseasnetserver
 export PATH=/usr/local/cs/bin:$PATH
 cd ~eggert/src/gnu/emacs
 gitk
