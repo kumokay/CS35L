@@ -141,7 +141,8 @@ where the D is the directory containing your diff implementation.
 ```
 9. There is a copy of the GNU Emacs git repository's master branch on SEASnet in the directory ~eggert/src/gnu/emacs. Run the command gitk on it, and find the newest merge that is not newer than 2015-01-25. Take a screenshot gitk-screenshot.png of your view of the mergepoint, and in an ASCII text file gitk-description.txt briefly describe the roles of subwindows that you see in the screenshot.
 ```
-ssh -Y yourid@yourseasnetserver
+ssh -X yourid@yourseasnetserver
+export PATH=/usr/local/cs/bin:$PATH
 cd ~eggert/src/gnu/emacs
 gitk
 ```
