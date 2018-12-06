@@ -101,6 +101,7 @@ where the D is the directory containing your diff implementation.
 # Homework
 1. Check out version 3.0 of Diffutils from your repository, into a new branch named “quote”.
 ```
+for homework you can clone diffutils again in a different folder to make sure everything is clean!
 [~] cd diffutils
 [~/diffutils] git checkout v3.0 -b quote
 ```
