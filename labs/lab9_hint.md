@@ -126,14 +126,18 @@ where the D is the directory containing your diff implementation.
 # get partner-patch.txt via any method (scp, google drive, messenger, etc)
 
 [~/diffutils] git am < ../partner-patch.txt
-```
-8. Verify that your ChangeLog entry works, by running the command “make distdir” and inspecting the resulting diffutils*/ChangeLog file.
-```
+
 [~/diffutils] ./bootstrap
 [~/diffutils] ./configure
 [~/diffutils] make
 [~/diffutils] make check
-[~/diffutils] make distdir
+
+```
+8. Verify that your ChangeLog entry works, by running the command “make distdir” and inspecting the resulting diffutils*/ChangeLog file.
+```
+[~/diffutils] make distdir    # it will create diffutils-3.0-dirty
+[~/diffutils] cd diffutils-3.0-dirty
+[~/diffutils/diffutils-3.0-dirty] cat ChangeLog
 ```
 9. There is a copy of the GNU Emacs git repository's master branch on SEASnet in the directory ~eggert/src/gnu/emacs. Run the command gitk on it, and find the newest merge that is not newer than 2015-01-25. Take a screenshot gitk-screenshot.png of your view of the mergepoint, and in an ASCII text file gitk-description.txt briefly describe the roles of subwindows that you see in the screenshot.
 ```
