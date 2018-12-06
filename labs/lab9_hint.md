@@ -137,7 +137,7 @@ where the D is the directory containing your diff implementation.
 ```
 [~/diffutils] make distdir    # it will create diffutils-3.0-dirty
 [~/diffutils] cd diffutils-3.0-dirty
-[~/diffutils/diffutils-3.0-dirty] cat ChangeLog
+[~/diffutils/diffutils-3.0-dirty] more ChangeLog    # or less or emacs..
 ```
 9. There is a copy of the GNU Emacs git repository's master branch on SEASnet in the directory ~eggert/src/gnu/emacs. Run the command gitk on it, and find the newest merge that is not newer than 2015-01-25. Take a screenshot gitk-screenshot.png of your view of the mergepoint, and in an ASCII text file gitk-description.txt briefly describe the roles of subwindows that you see in the screenshot.
 ```
