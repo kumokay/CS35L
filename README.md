@@ -2,41 +2,16 @@
 
 https://web.cs.ucla.edu/classes/fall18/cs35L/
 
-## Who grades which homework
-
-### email the TA directly if you have any questions/issues
-
-Assignment 1: Shrey Agarwal
-
-Assignment 2: Jeremy Rotman
-
-Assignment 3: Mevlut Turker Garip
-
-Assignment 4: Aditi Mithal
-
-Assignment 5: Rahul Dhavalikar
-
-Assignment 6: Guangyu Zhou
-
-Assignment 7: Each TA will grade his/her own section's submissions
-
-Assignment 8: Zhiyi Zhang
-
-Assignment 9: Hsiao-Yun Tseng
-
-Assignment 10: Each TA will grade his/her own section's submissions
-
-
 ## use linux servers:
 
 ### windows:
 download putty: http://www.putty.org
 
-set hostname=cs31.seas.ucla.edu and then press "open"
+set hostname=lnxsrv07.seas.ucla.edu and then press "open"
 
 ### mac: 
 
-ssh yourSEASaccount@lnxsrv09.seas.ucla.edu
+ssh yourSEASaccount@lnxsrv07.seas.ucla.edu
 
 ## upload your project to linux servers:
 
@@ -44,15 +19,13 @@ ssh yourSEASaccount@lnxsrv09.seas.ucla.edu
 
 download filezilla client: https://filezilla-project.org/download.php
 
-set host=cs31.seas.ucla.edu, port=22, use your username and password then press "QuickConnect"
+set host=lnxsrv07.seas.ucla.edu, port=22, use your username and password then press "QuickConnect"
 
 ## linux command cheat sheet
 
 http://www.pixelbeat.org/cmdline.html
 
-vim cheat sheet
-
-https://vim.rtorr.com
+vim cheat sheet: https://vim.rtorr.com
 
 ### applications for windows users
 
